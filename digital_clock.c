@@ -36,7 +36,9 @@ int main() {
 }
 //functions
 void clear_screen(){
-    printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+    //printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); to be used if clear is not working
+    printf("\033[H\033[J");
+    fflush(stdout);
 }
 void fill_date(char buffer[]){
     time_t raw_time;
